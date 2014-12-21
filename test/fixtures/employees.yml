@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: MyString
+  last_chat: 2014-12-16
+
+two:
+  id: 1
+  name: MyString
+  last_chat: 2014-12-16

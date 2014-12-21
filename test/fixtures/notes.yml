@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  note: MyString
+  created_at: 2014-12-16 14:50:44
+  employee: 
+
+two:
+  note: MyString
+  created_at: 2014-12-16 14:50:44
+  employee: 
