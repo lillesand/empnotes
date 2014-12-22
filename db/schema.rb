@@ -23,9 +23,12 @@ ActiveRecord::Schema.define(version: 20141216135044) do
 
   create_table "notes", force: true do |t|
     t.string   "note"
-    t.datetime "created_at"
+    t.datetime "added_at"
     t.integer  "employee_id"
+    t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "notes", ["employee_id"], name: "index_notes_on_employee_id"
 
 end

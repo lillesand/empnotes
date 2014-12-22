@@ -1,0 +1,17 @@
+<h1>Employees</h1>
+
+<table>
+  Total: <%= @employees.size %> (<%= link_to('Add new', new_employee_path) %>)
+
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+
+  <% @employees.each do |employee| %>
+  <tr>
+    <td><%= link_to(employee.bekk_id, employee_path(employee)) %></td>
+    <td><%= employee.name %></td>
+  </tr>
+  <% end %>
+</table>

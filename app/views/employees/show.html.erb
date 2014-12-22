@@ -1,2 +1,26 @@
-<h1></h1>
+<h1>Employee</h1>
+
+<%= link_to 'Overview', employees_path %>
+
 <p><%= @employee.name %> (<%= @employee.bekk_id %>)<p>
+
+<% @employee.notes.order('added_at desc').each do |n| %>
+  <p><%= n.added_at %></p>
+  <p><%= n.note %></p>
+<% end %>
+
+
+<h2>Note:</h2>
+<%= form_for([@employee, @employee.notes.build]) do |f| %>
+<p>
+  <%= f.label :date %><br>
+  <%= f.date_field :added_at %>
+</p>
+<p>
+  <%= f.label :note %><br>
+  <%= f.text_area :note %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

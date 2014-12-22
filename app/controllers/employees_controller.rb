@@ -1,6 +1,7 @@
 class EmployeesController < ApplicationController
 
   def index
+    @employees = Employee.all
   end
 
   def new
@@ -18,6 +19,7 @@ class EmployeesController < ApplicationController
 
   def show
     @employee = Employee.find(params[:id])
+    @note = @employee.notes.build
   end
 
   private
