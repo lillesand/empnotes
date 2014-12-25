@@ -14,3 +14,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+db/seeds/all.json
+db/seeds/mine.txt
