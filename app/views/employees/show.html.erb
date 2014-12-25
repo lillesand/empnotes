@@ -6,7 +6,7 @@
   <p><%= @employee.name %> (<%= @employee.bekk_id %>)<p>
 
   <% @employee.notes.order('added_at desc').each do |n| %>
-    <p><%= n.added_at %></p>
+    <p><%= n.added_at.strftime('%d.%m.%Y') %></p>
     <p><%= n.note %></p>
   <% end %>
 

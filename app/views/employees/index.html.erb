@@ -1,17 +1,19 @@
-<h1>Employees</h1>
+<section id="employees">
+  <h1>Employees</h1>
 
-<table>
-  Total: <%= @employees.size %> (<%= link_to('Add new', new_employee_path) %>)
+  <p>Total: <%= @employees.size %> (<%= link_to('Add new', new_employee_path) %>)</p>
 
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-  </tr>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
 
-  <% @employees.each do |employee| %>
-  <tr>
-    <td><%= link_to(employee.bekk_id, employee_path(employee)) %></td>
-    <td><%= employee.name %></td>
-  </tr>
-  <% end %>
-</table>
+    <% @employees.each do |employee| %>
+    <tr data-href="<%= employee_path(employee) %>">
+      <td><%= link_to(employee.bekk_id, employee_path(employee)) %></td>
+      <td><%= employee.name %></td>
+    </tr>
+    <% end %>
+  </table>
+</section>
