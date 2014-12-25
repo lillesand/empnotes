@@ -5,8 +5,8 @@
 
   <p><%= @employee.name %> (<%= @employee.bekk_id %>)<p>
 
-  <% @employee.notes.order('added_at desc').each do |n| %>
-    <p><%= n.added_at.strftime('%d.%m.%Y') %></p>
+  <% @employee.notes.each do |n| %>
+    <h3><%= unless n.added_at == nil then n.added_at.strftime('%d.%m.%Y') end %></h3>
     <p><%= n.note %></p>
   <% end %>
 

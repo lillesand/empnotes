@@ -5,14 +5,15 @@
 
   <table class="table">
     <tr>
-      <th>ID</th>
+
       <th>Name</th>
+      <th>ID</th>
     </tr>
 
     <% @employees.each do |employee| %>
     <tr data-href="<%= employee_path(employee) %>">
-      <td><%= link_to(employee.bekk_id, employee_path(employee)) %></td>
       <td><%= employee.name %></td>
+      <td><%= link_to(employee.bekk_id, employee_path(employee)) %></td>
     </tr>
     <% end %>
   </table>
