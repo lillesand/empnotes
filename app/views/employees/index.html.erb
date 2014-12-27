@@ -5,15 +5,16 @@
 
   <table class="table">
     <tr>
-
       <th>Name</th>
-      <th>ID</th>
+      <th>Last chat</th>
+      <th>Days since last</th>
     </tr>
 
-    <% @employees.each do |employee| %>
+    <% @employees.sort{ |e1, e2| e2.days_since_last_chat <=> e1.days_since_last_chat }.each do |employee| %>
     <tr data-href="<%= employee_path(employee) %>">
       <td><%= employee.name %></td>
-      <td><%= link_to(employee.bekk_id, employee_path(employee)) %></td>
+      <td><%= if employee.last_chat.respond_to?(:strftime) then employee.last_chat.strftime('%d.%m.%Y') end %></td>
+      <td><%= employee.days_since_last_chat %></td>
     </tr>
     <% end %>
   </table>
