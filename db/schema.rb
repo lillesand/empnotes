@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20141216135044) do
   create_table "notes", force: true do |t|
     t.string   "note"
     t.datetime "added_at"
+    t.string   "happiness"
     t.integer  "employee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
