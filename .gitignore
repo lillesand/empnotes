@@ -16,3 +16,4 @@
 /tmp
 db/seeds/all.json
 db/seeds/mine.txt
+.idea/
