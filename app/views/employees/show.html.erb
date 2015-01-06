@@ -1,9 +1,14 @@
-<section id="employee" class="col-md-8">
+<section id="employee" class="col-md-12">
   <h1>Employee</h1>
 
   <%= link_to 'Overview', employees_path %>
 
   <p><%= @employee.name %> (<%= @employee.bekk_id %>)</p>
+
+  <a href="https://intern.bekk.no/Staffing2/Ansatte/<%= @employee.bekk_id %>" target="staffing-frame" class="staffing-link">Staffing</a>
+  <div id="staffing-frame-holder" class="hidden col-md-12">
+    <iframe name="staffing-frame"></iframe>
+  </div>
 
   <% @employee.notes.each do |n| %>
     <h3>
@@ -24,7 +29,7 @@
   <%= form_for([@employee, @employee.notes.build]) do |f| %>
   <div class="form-group">
     <%= f.label :date %>
-    <div class="input-group col-md-4 date">
+    <div class="input-group col-md-3 date">
       <%= f.text_field :added_at, class: 'form-control' %>
       <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
     </div>
@@ -34,7 +39,7 @@
     <%= f.select :happiness, ['Good', "Average", "Bad"], class: 'form-control', selected: 'Good' %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <%= f.label :note %>
     <%= f.text_area :note, class: "form-control", rows: 3 %>
   </div>

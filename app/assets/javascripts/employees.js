@@ -11,4 +11,8 @@ $(document).ready(function() {
     e.preventDefault();
     window.location = e.currentTarget.dataset.href;
   });
+
+  $('.staffing-link').on('click', function(e) {
+    $('#staffing-frame-holder').toggleClass('hidden');
+  });
 });
