@@ -8,13 +8,12 @@ require 'json'
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-all_employees = JSON.parse(File.read("#{File.dirname(__FILE__)}/seeds/all.json"))
+all_employees = JSON.parse(File.read("#{Rails.root}/db/seeds/all.json"))
 
 
 number_of_inserts = 0
 employee_entities = []
-File.foreach("#{File.dirname(__FILE__)}/seeds/mine.txt", encoding: 'utf-8') { |line|
+File.foreach("#{Rails.root}/db/seeds/mine.txt", encoding: 'utf-8') { |line|
   match = false
   all_employees.each { |employee|
     next if line == nil or employee == nil or employee['Name'] == nil
