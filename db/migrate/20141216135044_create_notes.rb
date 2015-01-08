@@ -1,7 +1,7 @@
 class CreateNotes < ActiveRecord::Migration
   def change
     create_table :notes do |t|
-      t.string :note
+      t.text :note
       t.datetime :added_at
       t.string :happiness
       t.references :employee, index: true
