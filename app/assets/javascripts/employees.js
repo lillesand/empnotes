@@ -15,4 +15,6 @@ $(document).ready(function() {
   $('.staffing-link').on('click', function(e) {
     $('#staffing-frame-holder').toggleClass('hidden');
   });
+
+  new Tablesort(document.getElementById('employee-table'));
 });

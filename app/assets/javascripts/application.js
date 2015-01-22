@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require tablesort-2.2.0.min.js
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
