@@ -11,20 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216135044) do
+ActiveRecord::Schema.define(version: 20150122141856) do
 
-  create_table "employees", force: true do |t|
+  create_table "employees", force: :cascade do |t|
     t.integer  "bekk_id"
-    t.string   "name"
+    t.string   "name",       limit: 255
     t.date     "last_chat"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "staffing"
   end
 
-  create_table "notes", force: true do |t|
-    t.string   "note"
+  create_table "notes", force: :cascade do |t|
+    t.string   "note",        limit: 255
     t.datetime "added_at"
-    t.string   "happiness"
+    t.string   "happiness",   limit: 255
     t.integer  "employee_id"
     t.datetime "created_at"
     t.datetime "updated_at"

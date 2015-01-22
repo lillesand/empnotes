@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :notes
   end
 
+  post 'trigger/fetch_projects' => 'fetch_projects#trigger_job'
+
   root 'employees#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
