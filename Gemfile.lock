@@ -163,7 +163,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-datepicker-rails
   coffee-rails (~> 4.0.0)
-  httparty (= 0.13.3)
+  httparty (~> 0.13.3)
   jbuilder (~> 2.0)
   jquery-rails
   json
