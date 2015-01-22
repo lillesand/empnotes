@@ -30,7 +30,7 @@ class BekkIntern
 
     hoursForWeek = ''
     accounts = res.scan(/\s+(?<account>[A-Z]{3}[0-9]{4})\s{1}\((?<hours>[0-9,]+t{1}),/) do |account, hours|
-      hoursForWeek = hoursForWeek + "#{account} (#{hours}), "
+      hoursForWeek = hoursForWeek + "#{account} (#{hours}), " unless account.include? 'ADM'
     end
 
     #Remove trailing ', '
