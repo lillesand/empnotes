@@ -7,7 +7,7 @@ $(document).ready(function() {
     todayHighlight: true
   });
 
-  $('#employees').on('click', 'table tr', function(e) {
+  $('#employees').on('click', 'tbody tr', function(e) {
     e.preventDefault();
     window.location = e.currentTarget.dataset.href;
   });

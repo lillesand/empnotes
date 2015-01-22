@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#staffing-frame-holder {
-  iframe {
-    width: 100%;
-    resize: both;
-    overflow: auto;
+#employees {
+
+  #staffing-frame-holder {
+    iframe {
+      width: 100%;
+      resize: both;
+      overflow: auto;
+    }
   }
+
+  tbody tr {
+    cursor: pointer;
+  }
+
 }
