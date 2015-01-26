@@ -16,5 +16,8 @@ $(document).ready(function() {
     $('#staffing-frame-holder').toggleClass('hidden');
   });
 
-  new Tablesort(document.getElementById('employee-table'));
+  var employeeTable = document.getElementById('employee-table');
+  if (employeeTable) {
+    new Tablesort(employeeTable);
+  }
 });

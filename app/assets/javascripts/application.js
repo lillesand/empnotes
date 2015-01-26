@@ -12,6 +12,7 @@
 //
 //= require tablesort-2.2.0.min.js
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap-datepicker/core
