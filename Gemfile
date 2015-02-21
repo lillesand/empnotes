@@ -42,6 +42,9 @@ gem "twitter-bootstrap-rails"
 
 gem 'bootstrap-datepicker-rails'
 
+# Markdown support
+gem 'redcarpet'
+
 gem 'json'
 
 

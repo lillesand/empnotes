@@ -21,7 +21,7 @@
       <%= unless n.added_at == nil then n.added_at.strftime('%d.%m.%Y') end %>
     </h3>
 
-    <p><%= n.note %></p>
+    <p><%= markdown(n.note) %></p>
   <% end %>
 
 
