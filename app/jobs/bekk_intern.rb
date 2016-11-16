@@ -12,10 +12,10 @@ class BekkIntern
     end_date = Date.commercial(Date.today.year, week, 7)
 
 
-    res = HTTParty.get("https://intern.bekk.no/Staffing2/Ansatte/EmployeeStaffingHover?employeeId=#{emp_id}&start=#{start_date}&end=#{end_date}",
+    res = HTTParty.get("https://staffing.bekk.no/Ansatte/EmployeeStaffingHover?employeeId=#{emp_id}&start=#{start_date}&end=#{end_date}",
       {
         headers: { 'Cookie' => "casAuth=#{@casAuth}" },
-        timeout: 2000
+        timeout: 10000
       }
     )
 

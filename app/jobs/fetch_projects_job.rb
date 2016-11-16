@@ -1,6 +1,10 @@
 class FetchProjectsJob < ActiveJob::Base
   queue_as :default
 
+  # Finn staffing cookie fra https://staffing.bekk.no/Ansatte/
+  # heroku run rails console
+  # FetchProjectsJob.perform_later 'cookie'
+
   def perform(casAuth)
     bekk_intern_api = BekkIntern.new(casAuth)
     employees = Employee.all
