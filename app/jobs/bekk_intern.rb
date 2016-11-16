@@ -3,8 +3,8 @@ require 'date'
 
 class BekkIntern
 
-  def initialize(casAuth)
-    @casAuth = casAuth
+  def initialize(cookie)
+    @cookie = cookie
   end
 
   def fetch_hours_for(emp_id, week)
@@ -14,7 +14,7 @@ class BekkIntern
 
     res = HTTParty.get("https://staffing.bekk.no/Ansatte/EmployeeStaffingHover?employeeId=#{emp_id}&start=#{start_date}&end=#{end_date}",
       {
-        headers: { 'Cookie' => "casAuth=#{@casAuth}" },
+        headers: { 'Cookie' => "staffing=#{@cookie}" },
         timeout: 10000
       }
     )
